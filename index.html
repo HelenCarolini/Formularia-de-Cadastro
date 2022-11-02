@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="/assets/img/banner.png" alt="">
+        </div>
+        <div class="form">
+            <form id="register-form" action="https://api.staticforms.xyz/submit" method="post">
+                <input type="hidden" name="acessKey" value= "f38aeb6e-c863-4f75-8eb0-4566cff94ef4" /> 
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastre-se</h1>
+                    </div>
+                    <div class="login-button">
+                        <button><a href="#">Entrar</a></button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="name">Nome</label>
+                        <input type="text" name="name" id="name" placeholder="Digite seu nome" data-required
+                            data-min-length="3" data-max-length="50">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="lastname">Sobrenome</label>
+                        <input id="lastname" type="text" name="subject" placeholder="Digite seu sobrenome" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-min-length="2"
+                            data-email-validate>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="number">Celular</label>
+                        <input id="number" type="text" name="phone" placeholder="(xx) xxxx-xxxx" data-required
+                            data-only-letters>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="lastname">Senha</label>
+                        <input type="password" name="password" id="password" placeholder="Digite sua senha"
+                            data-password-validate data-required>
+                    </div>
+
+
+                    <div class="input-box">
+                        <label for="passconfirmation">Confirmação de senha</label>
+                        <input type="password" name="passconfirmation" id="passwordconfirmation"
+                            placeholder="Digite novamente sua senha" data-equal="password">
+                    </div>
+
+                </div>
+
+                <div class="gender-inputs">
+                    <div class="gender-title">
+                        <h6>Gênero</h6>
+                    </div>
+
+                    <div class="gender-group">
+                        <div class="gender-input">
+                            <input id="female" type="radio" name="gender">
+                            <label for="female">Feminino</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="male" type="radio" name="gender">
+                            <label for="male">Masculino</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="others" type="radio" name="gender">
+                            <label for="others">Outros</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="none" type="radio" name="gender">
+                            <label for="none">Prefiro não dizer</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="continue-button">
+                    <button><a id="btn-submit" type="submit" value="Continuar">Continuar</a> </button>
+                </div>
+                <div>
+                    <input type="checkbox" name="agreement" id="agreement">
+                    <label for="agreement" id="agreement-label">Eu li e aceito os <a href="#">termos de uso</a></label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <p class="error-validation template"></p>
+    <script src="/js/scripts.js"></script>
+</body>
+
+</html>
